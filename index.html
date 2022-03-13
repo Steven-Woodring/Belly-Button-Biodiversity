@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div id="jumbotron-heading" class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Why The Navel?</h2>
+        <p>
+          Synthetic beef companies have increased in notoriety as people search for healthier, more
+          sustainable protein alternatives.<br>Improbable Beef is new to this space and is interested in
+          studying bacterial species that can synthesize proteins that taste<br>like beef.
+          Other labs have found success in imitating meat with algae, fungi, and microorganisms
+          found on plant roots.<br>However, there are many bacterial species that do not receive much
+          scientific attention, and it is possible that one of them<br>makes an even tastier beef
+          alternative. One place that imitation protein companies have failed to investigate thus far
+          is the<br>belly button. Individuals across the country were sampled to identify the species
+          that colonize their navels. This dashboard<br>allows the research participants as well as the
+          scientists to view the bacterial species that were found in each<br>anonymous sample by selecting
+          an ID number.
+          <br><br>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/json/samples.json"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
